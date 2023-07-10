@@ -13,16 +13,10 @@ export default defineComponent({
         return {
             estilos: {
                 background: '#FAF0CA',
-                color: '#000'
+                // color: '#000'
             }
         }
     }
 })
 
 </script>
-
-<style scoped>
-.box {
-    color:black
-}
-</style>

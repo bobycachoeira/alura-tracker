@@ -22,7 +22,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import CronometroInicial from './CronometroInicial.vue'
-import BotaoPlayPause from './BotaoPlayPause.vue'
 
 export default defineComponent({
     name: 'TemporizadorTarefa',

@@ -4,7 +4,7 @@
             <div class="column is-7">
                 {{ tarefa.descricao || 'Tarefa sem descrição' }}
             </div>
-            <div class="column is-7 cronometro">
+            <div class="column is-7">
                 <CronometroInicial :tempoEmSegundos="tarefa.duracaoEmSegundos" />
             </div>
         </div>
@@ -31,6 +31,3 @@ export default defineComponent({
     }
 })
 </script>
-
-<style scoped>
-</style>
