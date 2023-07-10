@@ -19,18 +19,19 @@
     </div>
 </template>
 
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 import CronometroInicial from './CronometroInicial.vue'
+import BotaoPlayPause from './BotaoPlayPause.vue'
 
 export default defineComponent({
     name: 'TemporizadorTarefa',
     emits: ['aoTemporizadorFinalizado'],
     components: {
-        CronometroInicial
+        CronometroInicial,
+        // BotaoPlayPause
     },
-    data () {
+    data() {
         return {
             tempoEmSegundos: 0,
             cronometro: 0,
@@ -38,21 +39,20 @@ export default defineComponent({
         }
     },
     methods: {
-        iniciar (){
+        iniciar() {
             //começar a contagem
             //conta 1 a cada um segundo
             this.cronometroRodando = true,
-            this.cronometro = setInterval(()=> {
-                this.tempoEmSegundos += 1               
-            }, 1000)   
+                this.cronometro = setInterval(() => {
+                    this.tempoEmSegundos += 1
+                }, 1000)
         },
-        finalizar () {
+        finalizar() {
             this.cronometroRodando = false,
-            clearInterval(this.cronometro)
+                clearInterval(this.cronometro)
             this.$emit('aoTemporizadorFinalizado', this.tempoEmSegundos)
             this.tempoEmSegundos = 0
         }
     }
 })
 </script>
-

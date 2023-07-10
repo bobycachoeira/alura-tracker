@@ -1,10 +1,10 @@
 <template>
-   <BoxTarefa>
+    <BoxTarefa>
         <div class="columns">
             <div class="column is-7">
                 {{ tarefa.descricao || 'Tarefa sem descrição' }}
             </div>
-            <div class="column is-7">
+            <div class="column is-7 cronometro">
                 <CronometroInicial :tempoEmSegundos="tarefa.duracaoEmSegundos" />
             </div>
         </div>
@@ -33,5 +33,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
 </style>

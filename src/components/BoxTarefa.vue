@@ -1,5 +1,5 @@
 <template>
-   <div class="box has-text-weight-bold" :style="estilos">
+    <div class="box has-text-weight-bold" :style="estilos">
     <slot></slot>
    </div>
 </template>
@@ -20,9 +20,9 @@ export default defineComponent({
 })
 
 </script>
-<!-- 
+
 <style scoped>
 .box {
-    background: #FAF0CA;
+    color:black
 }
-</style> -->
+</style>
