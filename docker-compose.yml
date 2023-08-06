@@ -4,11 +4,29 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: builder_vue
     container_name: alura-tracker
     ports:
       - "8080:8080"
+    networks:
+      - monitoring  
     volumes:
       - .:/app
+
+
+  api-teste:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder_json_server
+    container_name: api-teste
+    ports:
+      - "5000:3000"
+    networks:
+      - monitoring   
+    volumes:
+      - .:/api-teste   
+
 
   prometheus:
     image: prom/prometheus
@@ -22,6 +40,7 @@ services:
 
   grafana:
     image: grafana/grafana
+    container_name: grafana
     ports:
       - 3000:3000
     networks:
