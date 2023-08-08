@@ -21,7 +21,7 @@
     },
     {
       "duracaoEmSegundos": 2,
-      "descricao": "Teste",
+      "descricao": "Teste aletrado",
       "projeto": {
         "id": 1,
         "nome": "Alura Tracker 3.0"
@@ -30,7 +30,7 @@
     },
     {
       "duracaoEmSegundos": 1,
-      "descricao": "dfds bgdffbfb",
+      "descricao": "Cachoeira",
       "projeto": {
         "id": 1,
         "nome": "Alura Tracker 3.0"
