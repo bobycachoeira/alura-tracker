@@ -28,15 +28,14 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'BarraLateral',
-    emits: ['aoTemaAlterado'],
-    data () {
-        return {
-            modoEscuroAtivo: false
+    props: {
+        modoEscuro: {
+            type: Boolean,
         }
     },
     computed: {
         textoBotao (){           
-            if (this.modoEscuroAtivo) {
+            if (this.modoEscuro) {
                 return 'Desativar Modo Escuro'
             }
             return 'Ativar Modo Escuro'
@@ -44,8 +43,7 @@ export default defineComponent({
     },
     methods: {
         alterarTema() {
-            this.modoEscuroAtivo = !this.modoEscuroAtivo
-            this.$emit('aoTemaAlterado',this.modoEscuroAtivo)
+            this.$emit('trocar-tema')
         }
     }
 });

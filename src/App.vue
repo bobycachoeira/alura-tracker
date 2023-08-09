@@ -1,7 +1,7 @@
 <template>
   <main class="columns is-gapless is-multiline" :class="{ 'modo-escuro': modoEscuroAtivo }">
     <div class="column is-one-quarter">
-      <BarraLateral @aoTemaAlterado="trocarTema"/>
+      <BarraLateral @trocar-tema="trocarTema" :modo-escuro="modoEscuroAtivo"/>
     </div>
     <div class="column is-three-quarter conteudo">
       <NotificacoesApp />
@@ -26,8 +26,8 @@ export default defineComponent({
     }
   },
   methods: {
-    trocarTema (modoEscuroAtivo: boolean){
-      this.modoEscuroAtivo = modoEscuroAtivo
+    trocarTema (){
+      this.modoEscuroAtivo = !this.modoEscuroAtivo
     }
   }
 });
