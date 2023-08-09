@@ -26,8 +26,6 @@ import { computed, defineComponent } from 'vue';
 import TemporizadorTarefa from './TemporizadorTarefa.vue'
 import { useStore } from 'vuex'
 import { key } from '@/store'
-import { TipoNotificacao } from '@/interfaces/INotificacao';
-import { NOTIFICAR } from '@/store/tipo-mutacoes';
 
 export default defineComponent({
     name: 'FormularioTempo',
@@ -64,7 +62,7 @@ export default defineComponent({
     setup() {
         const store = useStore(key)
         return {
-            projetos: computed(() => store.state.projetos),
+            projetos: computed(() => store.state.projeto.projetos),
             store
         }
     },
